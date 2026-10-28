@@ -1,0 +1,19 @@
+<!--META {"need":"loan","see_also":["fuel-cost-calculator","total-cost-of-ownership","car-payment-calculator"]} -->
+<div data-tool="ev"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="field"><label for="e-miles">Miles driven per year</label><input id="e-miles" name="miles" type="number" inputmode="decimal" value="12000" min="0" step="500"></div><h3>Gas car</h3>
+<div class="row"><div class="field"><label for="e-mpg">Fuel economy (mpg)</label><input id="e-mpg" name="mpg" type="number" inputmode="decimal" value="30" min="1" step="1"></div>
+<div class="field"><label for="e-gas">Gas price per gallon</label><input id="e-gas" name="gasprice" type="number" inputmode="decimal" value="3.5" min="0" step="0.05"></div></div><h3 style="margin-top:8px">Electric car</h3>
+<div class="field"><label for="e-kwh">Efficiency (kWh per 100 miles) <span class="hint">(most EVs 25–40)</span></label><input id="e-kwh" name="kwh" type="number" inputmode="decimal" value="30" min="1" step="1"></div>
+<div class="row"><div class="field"><label for="e-home">Home electricity per kWh</label><input id="e-home" name="home" type="number" inputmode="decimal" value="0.17" min="0" step="0.01"></div>
+<div class="field"><label for="e-pub">Public fast charging per kWh</label><input id="e-pub" name="public" type="number" inputmode="decimal" value="0.45" min="0" step="0.01"></div></div>
+<div class="field"><label for="e-pct">Share of charging done in public</label><div class="range-wrap"><input id="e-pct" name="pubpct" type="range" min="0" max="100" step="5" value="20" data-suffix="%"><output for="e-pct">20%</output></div></div>
+<div class="row"><div class="field"><label for="e-maint">Yearly maintenance saving</label><input id="e-maint" name="maint" type="number" inputmode="decimal" value="400" min="0" step="50"></div>
+<div class="field"><label for="e-prem">Extra price of the EV <span class="hint">(after incentives)</span></label><input id="e-prem" name="premium" type="number" inputmode="decimal" value="4000" min="0" step="250"></div></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Yearly savings</h2>
+<p class="readout" data-o="save">—</p><p class="readout-sub" data-o="sub"></p><div class="split" data-o="bar"></div><ul class="legend"><li><i style="background:#E07A5F"></i>Gas per year</li>
+<li><i style="background:#4FB286"></i>Electricity per year</li></ul><ul class="kv"><li><span>Gas per year</span><b data-o="gascost">—</b></li>
+<li><span>Electricity per year</span><b data-o="evcost">—</b></li>
+<li><span>Blended charging price</span><b data-o="blended">—</b></li>
+<li><span>Savings over 5 years</span><b data-o="five">—</b></li>
+<li><span>Payback on the extra price</span><b data-o="payback">—</b></li>
+<li><span>Tailpipe CO₂ avoided</span><b data-o="co2">—</b></li></ul><a class="btn btn-go" href="{{root}}get-matched.html?need=loan">Finance an EV</a><p class="calc-note">CO₂ uses the EPA figure of about 8.9 kg per gallon of gasoline burned; it excludes power-plant emissions.</p></div></div></div>

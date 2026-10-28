@@ -1,0 +1,18 @@
+<!--META {"need":"dealer","see_also":["car-payment-calculator","depreciation-calculator","total-cost-of-ownership"]} -->
+<div data-tool="lease"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div><h3>Lease offer</h3>
+<div class="row"><div class="field"><label for="l-months">Lease length</label><select id="l-months" name="months"><option value="24">24 months</option><option value="36" selected>36 months</option><option value="39">39 months</option><option value="48">48 months</option></select></div>
+<div class="field"><label for="l-due">Due at signing</label><input id="l-due" name="due" type="number" inputmode="decimal" value="3000" min="0" step="100"></div></div>
+<div class="row"><div class="field"><label for="l-monthly">Monthly lease payment</label><input id="l-monthly" name="monthly" type="number" inputmode="decimal" value="450" min="0" step="5"></div>
+<div class="field"><label for="l-dispo">Disposition fee</label><input id="l-dispo" name="dispo" type="number" inputmode="decimal" value="395" min="0" step="5"></div></div><h3 style="margin-top:8px">Buying the same car</h3>
+<div class="row"><div class="field"><label for="b-price">Price</label><input id="b-price" name="price" type="number" inputmode="decimal" value="40000" min="0" step="500"></div>
+<div class="field"><label for="b-down">Down payment</label><input id="b-down" name="down" type="number" inputmode="decimal" value="3000" min="0" step="500"></div></div>
+<div class="row"><div class="field"><label for="b-apr">APR %</label><input id="b-apr" name="apr" type="number" inputmode="decimal" value="6.9" min="0" step="0.05"></div>
+<div class="field"><label for="b-term">Loan term</label><select id="b-term" name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></div></div>
+<div class="field"><label for="b-resale">Value when the lease would end <span class="hint">(% of price)</span></label><div class="range-wrap"><input id="b-resale" name="resale" type="range" min="30" max="85" step="1" value="58" data-suffix="%"><output for="b-resale">58%</output></div></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Over the lease period</h2>
+<p class="readout" data-o="headline">—</p><p class="readout-sub" data-o="sub"></p><div class="split" data-o="bar"></div><ul class="legend"><li><i style="background:#8FB8DE"></i>Lease cost</li>
+<li><i style="background:#4FB286"></i>Net cost of buying</li></ul><ul class="kv"><li><span>Total lease cost</span><b data-o="leasecost">—</b></li>
+<li><span>Net cost of buying</span><b data-o="buycost">—</b></li>
+<li><span>Loan payment</span><b data-o="buypay">—</b></li>
+<li><span>Loan balance at that point</span><b data-o="balance">—</b></li>
+<li><span>Estimated car value then</span><b data-o="resaleval">—</b></li></ul><p class="verdict" data-o="verdict"></p><a class="btn btn-go" href="{{root}}get-matched.html?need=dealer">Get competing dealer quotes</a></div></div></div>

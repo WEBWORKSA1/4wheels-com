@@ -12,7 +12,7 @@ The car-ownership command center: free calculators and plain-English guides brin
 - **AdSense:** the tag and `google-adsense-account` meta are on every page; `ads.txt` is at the root. Auto ads are the default; add manual units later between tool results and explainers.
 
 ## Publish
-Every push to `main` runs `.github/workflows/publish.yml`: it decodes any `*.b64` binary assets, runs `build.py`, commits the generated HTML back to `main`, and mirrors `main` to the `gh-pages` branch, which GitHub Pages serves. You can also run `python3 build.py` locally and push the output.
+GitHub Pages serves the `gh-pages` branch. To publish a change: edit `_src/`, run `python3 build.py`, commit everything to `main`, then merge `main` into `gh-pages`. Images are SVG so the whole site stays plain text.
 
 **Move to 4wheels.com** (needed for AdSense approval):
 1. Add a file named `CNAME` containing `4wheels.com`.

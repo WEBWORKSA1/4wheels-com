@@ -1,0 +1,32 @@
+<!--META {"title":"Free VIN Decoder: Look Up Year, Make, Model and Engine","h1":"Free VIN decoder","description":"Decode any 17-character VIN for free. Validate the check digit and look up model year, make, model, trim, body style, engine and assembly plant from NHTSA data.","intro":"Enter a 17-character VIN to check that it's valid and see the vehicle's year, make, model, engine and where it was built.","faq":[{"q":"Where can I find my VIN?","a":"Look at the base of the windshield on the driver's side, on the driver's door jamb sticker, or on your registration, title and insurance card. Make sure the VIN on the car matches the paperwork."},{"q":"Why does the VIN decoder say my check digit is invalid?","a":"The most common cause is a typing error, such as entering a zero instead of a D. Vehicles built for markets outside North America may not use a check digit at all, so a failed check on an imported vehicle doesn't always mean the VIN is fake."},{"q":"Does a VIN decoder show accident history?","a":"No. Decoding reveals how the vehicle was built, not what has happened since. For title brands, odometer readings and reported accidents, you need a vehicle history report, and in the US, an NMVTIS check covers title and salvage records."}]} -->
+<h2 id="how-to-use">How to use this VIN decoder</h2>
+<ol>
+<li>Find the VIN on the driver's side of the dashboard, the door jamb sticker or your registration documents.</li>
+<li>Type all 17 characters. VINs never use the letters I, O or Q, so treat what looks like an O as a zero.</li>
+<li>Submit the VIN to check the check digit and decode it.</li>
+<li>Review the year, make, model, trim, body, engine and plant details, and confirm they match the vehicle in front of you.</li>
+</ol>
+
+<h2 id="how-it-works">How it's calculated</h2>
+<p>A VIN is made up of fixed sections:</p>
+<ul>
+<li><strong>Positions 1 to 3, the World Manufacturer Identifier (WMI):</strong> country or region of origin and manufacturer.</li>
+<li><strong>Positions 4 to 8, the Vehicle Descriptor Section (VDS):</strong> the manufacturer's codes for model, body, engine and restraint systems.</li>
+<li><strong>Position 9:</strong> the check digit.</li>
+<li><strong>Position 10:</strong> model year.</li>
+<li><strong>Position 11:</strong> assembly plant.</li>
+<li><strong>Positions 12 to 17:</strong> the production sequence or serial number.</li>
+</ul>
+<p>To validate the check digit, each letter is converted to a number (A and J = 1, B, K and S = 2, up to R and Z = 9), while digits keep their own values. Each value is multiplied by its position's weight: 8, 7, 6, 5, 4, 3, 2, 10, then 0 for position 9, then 9 down to 2 for positions 10 to 17. The products are added and divided by 11. The remainder is the check digit, with a remainder of 10 written as X.</p>
+<p><strong>Example:</strong> in the VIN 1M8GDM9AXKP042788, the weighted products add up to 351. Dividing 351 by 11 gives 31 with a remainder of 10, so position 9 must be X, which it is. If the check passes, the decoder queries NHTSA's free public vPIC database for the vehicle details.</p>
+
+<h2 id="tips">Using a VIN when you buy a car</h2>
+<ul>
+<li>Compare the VIN on the dashboard, the door jamb and the title. If they don't match, walk away.</li>
+<li>Make sure the decoded engine, trim and body style match the listing. A mismatch can point to a misdescribed or altered vehicle.</li>
+<li>The model-year code repeats every 30 years. On light vehicles, a letter in position 7 indicates 2010 or later, and a number indicates 1980 to 2009.</li>
+<li>Run the same VIN through a recall check before you buy.</li>
+<li>Be wary of sharing a full VIN in public listings without reason, since it can be used to create cloned VINs for stolen vehicles.</li>
+</ul>
+
+<div class="callout"><p><strong>Good to know:</strong> The 17-character standard began with 1981 models. Older vehicles have shorter, manufacturer-specific serial numbers that this decoder can't read.</p></div>

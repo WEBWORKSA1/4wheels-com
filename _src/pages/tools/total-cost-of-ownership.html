@@ -1,0 +1,29 @@
+<!--META {"need":"insurance","see_also":["depreciation-calculator","ev-vs-gas","car-payment-calculator"]} -->
+<div data-tool="tco"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="row"><div class="field"><label for="t-price">Purchase price</label><input id="t-price" name="price" type="number" inputmode="decimal" value="35000" min="0" step="500"></div>
+<div class="field"><label for="t-years">Years you'll keep it</label><select id="t-years" name="years"><option value="3">3 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option></select></div></div>
+<div class="field"><label for="t-dep">How fast it loses value</label><select id="t-dep" name="deprate"><option value="12">Holds value well (12% a year)</option><option value="15" selected>Average (15% a year)</option><option value="20">Loses value fast (20% a year)</option></select></div>
+<div class="row"><div class="field"><label for="t-miles">Miles per year</label><input id="t-miles" name="miles" type="number" inputmode="decimal" value="12000" min="0" step="500"></div>
+<div class="field"><label for="t-mpg">Fuel economy (mpg)</label><input id="t-mpg" name="mpg" type="number" inputmode="decimal" value="30" min="1" step="1"></div></div>
+<div class="row"><div class="field"><label for="t-fuel">Fuel price per gallon</label><input id="t-fuel" name="fuelprice" type="number" inputmode="decimal" value="3.5" min="0" step="0.05"></div>
+<div class="field"><label for="t-ins">Insurance per year</label><input id="t-ins" name="insurance" type="number" inputmode="decimal" value="1800" min="0" step="50"></div></div>
+<div class="row"><div class="field"><label for="t-maint">Maintenance &amp; repairs, year one</label><input id="t-maint" name="maint" type="number" inputmode="decimal" value="900" min="0" step="50"></div>
+<div class="field"><label for="t-fees">Registration &amp; fees per year</label><input id="t-fees" name="fees" type="number" inputmode="decimal" value="400" min="0" step="10"></div></div>
+<div class="row"><div class="field"><label for="t-down">Down payment</label><input id="t-down" name="down" type="number" inputmode="decimal" value="5000" min="0" step="500"></div>
+<div class="field"><label for="t-apr">Loan APR %</label><input id="t-apr" name="apr" type="number" inputmode="decimal" value="7" min="0" step="0.05"></div></div>
+<div class="field"><label for="t-term">Loan term</label><select id="t-term" name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>True cost of owning it</h2>
+<p class="readout" data-o="total">—</p><p class="readout-sub" data-o="sub"></p><div class="split" data-o="bar"></div><ul class="legend"><li><i style="background:#F5B700"></i>Depreciation</li>
+<li><i style="background:#E07A5F"></i>Fuel</li>
+<li><i style="background:#8FB8DE"></i>Insurance</li>
+<li><i style="background:#4FB286"></i>Maintenance</li>
+<li><i style="background:#C3B1E1"></i>Fees</li>
+<li><i style="background:#F2CC8F"></i>Interest</li></ul><ul class="kv"><li><span>Per month</span><b data-o="permonth">—</b></li>
+<li><span>Per year</span><b data-o="peryear">—</b></li>
+<li><span>Per mile</span><b data-o="permile">—</b></li>
+<li><span>Value when you sell</span><b data-o="endval">—</b></li></ul><ul class="kv"><li><span>Depreciation</span><b data-o="dep">—</b></li>
+<li><span>Fuel</span><b data-o="fuel">—</b></li>
+<li><span>Insurance</span><b data-o="ins">—</b></li>
+<li><span>Maintenance &amp; repairs</span><b data-o="maint">—</b></li>
+<li><span>Registration &amp; fees</span><b data-o="fees">—</b></li>
+<li><span>Loan interest</span><b data-o="interest">—</b></li></ul><a class="btn btn-go" href="{{root}}get-matched.html?need=insurance">Cut your insurance line</a></div></div></div>
