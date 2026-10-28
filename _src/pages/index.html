@@ -1,0 +1,117 @@
+<!--META {"title":"4Wheels — free car calculators, guides and quotes","full_title":"4Wheels — Free Car Calculators, Guides & Quotes for Every Driver","description":"Free car payment, affordability, lease vs buy and EV calculators, a VIN decoder and recall check, plain-English guides, and free quotes for loans, insurance and selling.","tools_js":true,"priority":"1.0"} -->
+<section class="hero">
+  <div class="wrap">
+    <div class="sign">
+      <div class="sign-inner">
+        <h1>Your car, by the numbers.</h1>
+        <p class="lead">Free calculators, plain-English guides and real quotes for every stage of owning a car, from the first test drive to the day you sell.</p>
+        <ul class="exits">
+          <li class="exit"><a href="{{root}}guides/how-to-buy-a-new-car.html"><span class="exit-tab">Exit 1</span><span><span class="exit-name">Buy a car</span><span class="exit-sub">Pay the right price</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+          <li class="exit"><a href="{{root}}tools/car-payment-calculator.html"><span class="exit-tab">Exit 2</span><span><span class="exit-name">Finance</span><span class="exit-sub">Payments &amp; rates</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+          <li class="exit"><a href="{{root}}get-matched.html?need=insurance"><span class="exit-tab">Exit 3</span><span><span class="exit-name">Insure</span><span class="exit-sub">Compare quotes</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+          <li class="exit"><a href="{{root}}tools/maintenance-planner.html"><span class="exit-tab">Exit 4</span><span><span class="exit-name">Maintain</span><span class="exit-sub">What's due next</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+          <li class="exit"><a href="{{root}}get-matched.html?need=sell"><span class="exit-tab">Exit 5</span><span><span class="exit-name">Sell</span><span class="exit-sub">Get offers</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+          <li class="exit"><a href="{{root}}get-matched.html?need=ship"><span class="exit-tab">Exit 6</span><span><span class="exit-name">Ship</span><span class="exit-sub">Move it anywhere</span></span><svg class="exit-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5L4 18.5 14.6 7.9H8V5h11.5v11.5h-2.9V9.9z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="trust-row">
+      <li>Free, no sign-up</li>
+      <li>We never run your credit</li>
+      <li>{{tool_count}} calculators, {{guide_count}} guides</li>
+      <li>Requests go only to partners who can answer them</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap feature-split">
+    <div>
+      <div class="sec-head"><h2>What will the payment be?</h2><p>Change any number and the answer updates. The full calculator adds taxes, fees, trade-in and a year-by-year schedule.</p></div>
+      <div class="calc calc-mini" data-tool="payment">
+        <div class="calc-in">
+          <div class="field"><label for="h-price">Vehicle price</label><input id="h-price" name="price" type="number" inputmode="decimal" value="32000" min="0" step="500"></div>
+          <div class="field"><label for="h-down">Down payment</label><input id="h-down" name="down" type="number" inputmode="decimal" value="4000" min="0" step="500"></div>
+          <div class="row">
+            <div class="field"><label for="h-apr">APR %</label><input id="h-apr" name="apr" type="number" inputmode="decimal" value="7.5" min="0" step="0.1"></div>
+            <div class="field"><label for="h-term">Term</label><select id="h-term" name="term"><option value="36">36 mo</option><option value="48">48 mo</option><option value="60" selected>60 mo</option><option value="72">72 mo</option><option value="84">84 mo</option></select></div>
+          </div>
+          <a href="{{root}}tools/car-payment-calculator.html">Open the full payment calculator</a>
+        </div>
+        <div class="calc-out" style="position:static">
+          <h3>Monthly payment</h3>
+          <p class="readout" data-o="monthly">—</p>
+          <p class="readout-sub" data-o="sub"></p>
+          <ul class="kv"><li><span>Total interest</span><b data-o="interest">—</b></li><li><span>Total paid</span><b data-o="total">—</b></li></ul>
+          <a class="btn btn-go" href="{{root}}get-matched.html?need=loan">Find a lower rate</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h2 style="font-size:1.6rem">Get real offers in about two minutes</h2>
+      <p class="muted">Tell us what you need. We match you with lenders, insurers, buyers or carriers that serve your area. Free, no obligation.</p>
+      <form action="{{root}}get-matched.html" method="get">
+        <div class="field"><label for="q-need">I want to</label>
+          <select id="q-need" name="need">
+            <option value="insurance">Compare car insurance quotes</option>
+            <option value="loan">Get an auto loan</option>
+            <option value="refinance">Refinance my car loan</option>
+            <option value="sell">Sell or trade my car</option>
+            <option value="ship">Ship my car</option>
+            <option value="warranty">Price an extended warranty</option>
+            <option value="dealer">Get a better price on a new car</option>
+          </select></div>
+        <div class="field"><label for="q-zip">ZIP or postal code</label><input id="q-zip" name="zip" type="text" autocomplete="postal-code" placeholder="e.g. 90210 or M5V 2T6" maxlength="10"></div>
+        <button class="btn btn-go btn-block" type="submit">Start my request</button>
+      </form>
+      <p class="notice">Checking options never affects your credit score. We don't sell your details to anyone who can't help with your request.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <div class="sec-row"><h2>Free car tools</h2><a href="{{root}}tools/index.html">All {{tool_count}} tools</a></div>
+    {{tool_rows}}
+  </div>
+</section>
+
+<section class="band band-dark">
+  <div class="wrap">
+    <div class="sec-head"><h2>Three requests that usually pay for themselves</h2><p style="color:#C5CFCB">Most drivers never shop these. A few minutes of comparison is often worth hundreds a year.</p></div>
+    <div class="three-ways">
+      <div><h3>Insurance</h3><p>Premiums for the same driver and car can differ widely between insurers. Comparing at every renewal is the single easiest saving in car ownership.</p><a href="{{root}}get-matched.html?need=insurance">Compare quotes</a></div>
+      <div><h3>Your loan</h3><p>If rates have dropped or your credit has improved since you bought, a refinance can cut the payment without stretching the term.</p><a href="{{root}}get-matched.html?need=refinance">Check refinance offers</a></div>
+      <div><h3>Selling</h3><p>A trade-in is convenient, but competing offers usually beat a single dealer bid. Describe your car once and let buyers compete.</p><a href="{{root}}get-matched.html?need=sell">Get offers for my car</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-row"><h2>Guides for every stage</h2><a href="{{root}}guides/index.html">All {{guide_count}} guides</a></div>
+    {{stage_cols}}
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
+    <div class="sec-row"><h2>Watch and learn</h2><a href="{{root}}videos.html">All {{video_count}} videos</a></div>
+    {{videos_home}}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap grid g3">
+    <div class="panel"><h3>Monthly contests</h3><p>Show off your road trip, your restoration or your best DIY fix. New theme every month, real prizes.</p><a class="btn btn-sign btn-sm" href="{{root}}contests.html">Enter this month</a></div>
+    <div class="panel"><h3>We're hiring</h3><p>Automotive writers, video creators, technicians and partnership managers. Remote, flexible, paid.</p><a class="btn btn-ghost btn-sm" href="{{root}}careers.html">See open roles</a></div>
+    <div class="panel"><h3>Keep 4Wheels free</h3><p>Your support pays for new tools, contest prizes, hiring and the hosting that keeps every calculator free.</p><a class="btn btn-go btn-sm" href="{{root}}support.html">Support us</a></div>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap band-cta">
+    <div><h2>Reach drivers at the moment they decide</h2><p class="muted" style="color:var(--slate)">Sponsor a calculator, a guide hub or a contest, or partner with us on qualified loan, insurance, transport and warranty requests.</p></div>
+    <div><a class="btn btn-sign" href="{{root}}advertise.html">Advertise &amp; partner</a></div>
+  </div>
+</section>

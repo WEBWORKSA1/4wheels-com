@@ -1,0 +1,48 @@
+<!--META {"title":"Car videos: buying, maintenance, EV and off-road how-tos","crumb":"Videos","description":"Hand-picked how-to videos from trusted channels: negotiating, financing, insurance, checking tires and fluids, jump-starting, EV charging, off-roading and winter driving.","nav":"videos","priority":"0.7"} -->
+<section class="page-sign">
+  <div class="wrap">
+    <div class="sign"><div class="sign-inner">
+      <ol class="crumbs"><li><a href="{{root}}index.html">Home</a></li><li>Videos</li></ol>
+      <h1>Watch it done</h1>
+      <p class="lead">{{video_count}} hand-picked videos from channels that know cars. Each one loads only when you press play, so the page stays fast.</p>
+    </div></div>
+  </div>
+</section>
+<section class="band-tight">
+  <div class="wrap">
+    <ul class="chips" data-filter="#video-grid">
+      <li><button class="chip" type="button" data-cat="all" aria-pressed="true">All</button></li>
+      <li><button class="chip" type="button" data-cat="Buy" aria-pressed="false">Buying</button></li>
+      <li><button class="chip" type="button" data-cat="Finance" aria-pressed="false">Financing</button></li>
+      <li><button class="chip" type="button" data-cat="Insure" aria-pressed="false">Insurance</button></li>
+      <li><button class="chip" type="button" data-cat="Sell" aria-pressed="false">Selling</button></li>
+      <li><button class="chip" type="button" data-cat="Maintain" aria-pressed="false">Maintenance</button></li>
+      <li><button class="chip" type="button" data-cat="EV" aria-pressed="false">EV &amp; hybrid</button></li>
+      <li><button class="chip" type="button" data-cat="Off-road" aria-pressed="false">Off-road</button></li>
+      <li><button class="chip" type="button" data-cat="Safety" aria-pressed="false">Winter &amp; safety</button></li>
+    </ul>
+    <div id="video-grid">{{videos_all}}</div>
+    <p class="notice" style="margin-top:28px">Videos are embedded with YouTube's privacy-enhanced player and remain the property of their creators. 4Wheels is not affiliated with these channels and receives nothing for featuring them; we pick videos because they explain a task clearly and safely.</p>
+  </div>
+</section>
+<section class="band band-alt">
+  <div class="wrap feature-split">
+    <div>
+      <h2>Made a great car video?</h2>
+      <p class="muted">Suggest a how-to for this page, or enter it in this month's contest. Creators can also apply to make original videos for 4Wheels.</p>
+      <p><a class="btn btn-sign btn-sm" href="{{root}}contests.html">Enter the contest</a> <a class="btn btn-ghost btn-sm" href="{{root}}careers.html">Create for 4Wheels</a></p>
+    </div>
+    <form class="js-form form-card" data-subject="Video suggestion" data-ok="Thanks! We review every suggestion within a week." novalidate>
+      <h3>Suggest a video</h3>
+      <div class="field"><label for="vs-url">YouTube link</label><input id="vs-url" name="video_url" type="url" required placeholder="https://www.youtube.com/watch?v=…"></div>
+      <div class="row">
+        <div class="field"><label for="vs-name">Your name</label><input id="vs-name" name="name" type="text" required maxlength="60" autocomplete="name"></div>
+        <div class="field"><label for="vs-email">Email</label><input id="vs-email" name="email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="vs-why">Why it's useful <span class="hint">(optional)</span></label><input id="vs-why" name="why" type="text" maxlength="200"></div>
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-go" type="submit">Send suggestion</button>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
