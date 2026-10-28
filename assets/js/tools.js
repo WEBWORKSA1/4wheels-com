@@ -268,7 +268,10 @@
             '<a class="btn btn-go" href="recall-check.html?year=' + encodeURIComponent(d.ModelYear || "") + "&make=" + encodeURIComponent(d.Make || "") + "&model=" + encodeURIComponent(d.Model || "") + '">Check recalls for this car</a>' +
             '<p class="calc-note">Thinking of selling it? <a href="../get-matched.html?need=sell&year=' + encodeURIComponent(d.ModelYear || "") + "&make=" + encodeURIComponent(d.Make || "") + "&model=" + encodeURIComponent(d.Model || "") + '">Get offers for this ' + esc(d.Make || "car") + "</a>. Decoded with NHTSA's public vPIC database.</p>";
         })
-        .catch(function () { status.textContent = "The NHTSA decoder didn't respond. " + checkMsg + " You can also decode at vpic.nhtsa.dot.gov."; });
+        .catch(function () {
+          status.textContent = "The NHTSA decoder didn't respond from this page. " + checkMsg;
+          box.innerHTML = '<a class="btn btn-go" href="https://vpic.nhtsa.dot.gov/decoder/Decoder?VIN=' + encodeURIComponent(v) + '" target="_blank" rel="noopener">Decode on NHTSA\'s site</a>';
+        });
     });
   }
 
@@ -276,7 +279,15 @@
   function initRecall(root) {
     var form = $("form", root), status = $("[data-o=status]", root), box = $("[data-o=results]", root), list = $("#model-list");
     var p = new URLSearchParams(location.search);
-    ["year", "make", "model"].forEach(function (k) { var v = p.get(k); if (v) { var f = form.querySelector("[name=" + k + "]"); if (f) f.value = v; } });
+    ["year", "make", "model"].forEach(function (k) {
+      var v = p.get(k), f = form.querySelector("[name=" + k + "]");
+      if (!v || !f) return;
+      if (f.tagName === "SELECT") {
+        var opt = Array.prototype.filter.call(f.options, function (o) { return o.value.toLowerCase() === v.toLowerCase(); })[0];
+        if (!opt) { opt = document.createElement("option"); opt.value = v; opt.textContent = v; f.appendChild(opt); }
+        f.value = opt.value;
+      } else { f.value = v; }
+    });
     function suggest() {
       var y = form.year.value, mk = form.make.value.trim();
       if (!y || !mk || !list) return;
@@ -300,7 +311,11 @@
             return "<li><strong>" + esc(x.Component || "Component") + "</strong><span>Campaign " + esc(x.NHTSACampaignNumber || "") + (x.ReportReceivedDate ? ", reported " + esc(x.ReportReceivedDate) : "") + "</span><details><summary>Details</summary><p>" + esc(x.Summary || "") + "</p>" + (x.Consequence ? "<p><b>Risk:</b> " + esc(x.Consequence) + "</p>" : "") + (x.Remedy ? "<p><b>Remedy:</b> " + esc(x.Remedy) + "</p>" : "") + "</details></li>";
           }).join("") + "</ul>";
         })
-        .catch(function () { status.textContent = "The NHTSA recall service didn't respond. Try again shortly, or search by VIN at nhtsa.gov/recalls."; });
+        .catch(function () {
+          status.textContent = "NHTSA's recall service didn't respond from this page. Open the official results instead:";
+          box.innerHTML = '<a class="btn btn-go" href="https://www.nhtsa.gov/recalls" target="_blank" rel="noopener">Search recalls on NHTSA</a>' +
+            '<p class="calc-note"><a href="https://api.nhtsa.gov/recalls/recallsByVehicle?make=' + encodeURIComponent(mk) + "&model=" + encodeURIComponent(md) + "&modelYear=" + encodeURIComponent(y) + '" target="_blank" rel="noopener">View the raw NHTSA recall data for this vehicle</a></p>';
+        });
     }
     form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
     if (p.get("year") && p.get("make") && p.get("model")) run();
