@@ -1,0 +1,15 @@
+<!--META {"need":"refinance","see_also":["car-payment-calculator","total-cost-of-ownership","affordability-calculator"]} -->
+<div data-tool="refi"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div><h3>Current loan</h3>
+<div class="row"><div class="field"><label for="r-bal">Remaining balance</label><input id="r-bal" name="balance" type="number" inputmode="decimal" value="22000" min="0" step="100"></div>
+<div class="field"><label for="r-cur">Current APR %</label><input id="r-cur" name="curapr" type="number" inputmode="decimal" value="10.9" min="0" step="0.05"></div></div>
+<div class="field"><label for="r-left">Months left</label><input id="r-left" name="left" type="number" inputmode="decimal" value="48" min="1" step="1"></div><h3 style="margin-top:8px">New loan</h3>
+<div class="row"><div class="field"><label for="r-new">New APR %</label><input id="r-new" name="newapr" type="number" inputmode="decimal" value="6.9" min="0" step="0.05"></div>
+<div class="field"><label for="r-term">New term</label><select id="r-term" name="newterm"><option value="24">24 months</option><option value="36">36 months</option><option value="48" selected>48 months</option><option value="60">60 months</option><option value="72">72 months</option></select></div></div>
+<div class="field"><label for="r-fees">Refinance fees <span class="hint">(title, lender, state)</span></label><input id="r-fees" name="fees" type="number" inputmode="decimal" value="200" min="0" step="10"></div>
+<div class="field"><label class="check"><input type="checkbox" name="roll" checked> <span>Roll fees into the new loan</span></label></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Net result</h2>
+<p class="readout" data-o="save">—</p><p class="readout-sub" data-o="sub"></p><ul class="kv"><li><span>Current payment</span><b data-o="curpay">—</b></li>
+<li><span>New payment</span><b data-o="newpay">—</b></li>
+<li><span>Monthly change</span><b data-o="change">—</b></li>
+<li><span>Left to pay now</span><b data-o="curtotal">—</b></li>
+<li><span>Total with new loan</span><b data-o="newtotal">—</b></li></ul><p class="verdict" data-o="verdict"></p><a class="btn btn-go" href="{{root}}get-matched.html?need=refinance">Check refinance offers</a></div></div></div>

@@ -1,0 +1,12 @@
+<!--META {"need":"loan","see_also":["car-payment-calculator","total-cost-of-ownership","lease-vs-buy"]} -->
+<div data-tool="afford"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div><label class="label">Guideline</label><div class="seg" data-for="mode"><button type="button" data-v="classic" aria-pressed="true">Classic 20/4/10</button><button type="button" data-v="flex" aria-pressed="false">Flexible 15% / 60 mo</button></div><input type="hidden" name="mode" value="classic"><div class="field"><label for="a-income">Gross annual household income</label><input id="a-income" name="income" type="number" inputmode="decimal" value="75000" min="0" step="1000"></div>
+<div class="row"><div class="field"><label for="a-ins">Insurance per month</label><input id="a-ins" name="insurance" type="number" inputmode="decimal" value="150" min="0" step="10"></div>
+<div class="field"><label for="a-fuel">Fuel or charging per month</label><input id="a-fuel" name="fuel" type="number" inputmode="decimal" value="140" min="0" step="10"></div></div>
+<div class="field"><label for="a-apr">Expected APR %</label><input id="a-apr" name="apr" type="number" inputmode="decimal" value="7.5" min="0" step="0.05"></div>
+<div class="field"><label for="a-down">Down payment</label><div class="range-wrap"><input id="a-down" name="downpct" type="range" min="0" max="50" step="5" value="20" data-suffix="%"><output for="a-down">20%</output></div></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Maximum vehicle price</h2>
+<p class="readout" data-o="price">—</p><p class="readout-sub" data-o="sub"></p><ul class="kv"><li><span>Total monthly car budget</span><b data-o="budget">—</b></li>
+<li><span>Max loan payment</span><b data-o="maxpay">—</b></li>
+<li><span>Loan amount</span><b data-o="loan">—</b></li>
+<li><span>Down payment</span><b data-o="down">—</b></li>
+<li><span>Loan term</span><b data-o="term">—</b></li></ul><p class="verdict" data-o="verdict"></p><a class="btn btn-go" href="{{root}}get-matched.html?need=loan">See what lenders would offer</a></div></div></div>

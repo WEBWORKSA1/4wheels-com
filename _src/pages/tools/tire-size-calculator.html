@@ -1,0 +1,8 @@
+<!--META {"need":"insurance","see_also":["maintenance-planner","fuel-cost-calculator","vin-decoder"]} -->
+<div data-tool="tire"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="row"><div class="field"><label for="ts-1">Current tire size</label><input id="ts-1" name="size1" type="text" value="265/70R17" autocomplete="off" spellcheck="false"></div>
+<div class="field"><label for="ts-2">New tire size</label><input id="ts-2" name="size2" type="text" value="285/70R17" autocomplete="off" spellcheck="false"></div></div>
+<div class="field"><label for="ts-speed">Speedometer reading to check <span class="hint">(mph or km/h)</span></label><input id="ts-speed" name="speed" type="number" inputmode="decimal" value="60" min="5" step="5"></div><p class="hint">Metric sizes like 225/65R17 or LT285/75R16, or flotation sizes like 35x12.50R17.</p>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Diameter change</h2>
+<p class="readout" data-o="diff">—</p><p class="readout-sub" data-o="sub"></p><p class="verdict" data-o="speedo"></p><p class="calc-note" data-o="verdict" style="color:#DDE4E1;font-size:.92rem"></p><a class="btn btn-go" href="{{root}}guides/tires-101.html" style="margin-top:16px">Read: tires 101</a></div></div><h2 style="margin-top:36px">Side-by-side comparison</h2>
+<div class="table-wrap"><table><thead><tr><th>Measurement</th><th class="n">Current</th><th class="n">New</th><th class="n">Difference</th></tr></thead><tbody data-o="table"></tbody></table></div></div>

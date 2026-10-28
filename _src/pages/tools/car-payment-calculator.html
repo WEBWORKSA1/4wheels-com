@@ -1,0 +1,18 @@
+<!--META {"need":"loan","see_also":["affordability-calculator","refinance-calculator","lease-vs-buy"]} -->
+<div data-tool="payment"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="row"><div class="field"><label for="p-price">Vehicle price</label><input id="p-price" name="price" type="number" inputmode="decimal" value="35000" min="0" step="500"></div>
+<div class="field"><label for="p-down">Down payment</label><input id="p-down" name="down" type="number" inputmode="decimal" value="5000" min="0" step="500"></div></div>
+<div class="row"><div class="field"><label for="p-trade">Trade-in value</label><input id="p-trade" name="trade" type="number" inputmode="decimal" value="0" min="0" step="500"></div>
+<div class="field"><label for="p-owed">Owed on trade-in</label><input id="p-owed" name="owed" type="number" inputmode="decimal" value="0" min="0" step="500"></div></div>
+<div class="row"><div class="field"><label for="p-tax">Sales tax % <span class="hint">(varies by state)</span></label><input id="p-tax" name="tax" type="number" inputmode="decimal" value="7" min="0" step="0.05"></div>
+<div class="field"><label for="p-fees">Dealer &amp; registration fees</label><input id="p-fees" name="fees" type="number" inputmode="decimal" value="800" min="0" step="50"></div></div>
+<div class="row"><div class="field"><label for="p-apr">APR %</label><input id="p-apr" name="apr" type="number" inputmode="decimal" value="7.5" min="0" step="0.05"></div>
+<div class="field"><label for="p-term">Loan term</label><select id="p-term" name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></div></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Monthly payment</h2>
+<p class="readout" data-o="monthly">—</p><p class="readout-sub" data-o="sub"></p><div class="split" data-o="bar"></div><ul class="legend"><li><i style="background:#4FB286"></i>Principal</li>
+<li><i style="background:#F5B700"></i>Interest</li></ul><ul class="kv"><li><span>Amount financed</span><b data-o="financed">—</b></li>
+<li><span>Sales tax</span><b data-o="taxamt">—</b></li>
+<li><span>Out-the-door price</span><b data-o="otd">—</b></li>
+<li><span>Total interest</span><b data-o="interest">—</b></li>
+<li><span>Total of payments</span><b data-o="total">—</b></li></ul><p class="verdict" data-o="tip"></p><a class="btn btn-go" href="{{root}}get-matched.html?need=loan">Compare real loan offers</a><p class="calc-note">Rate shopping with several lenders in a short window generally counts as a single credit inquiry for scoring.</p></div></div><h2 style="margin-top:36px">Year-by-year schedule</h2>
+<div class="table-wrap"><table><thead><tr><th>Year</th><th class="n">Principal paid</th><th class="n">Interest paid</th><th class="n">Balance left</th></tr></thead><tbody data-o="amort"></tbody></table></div></div>

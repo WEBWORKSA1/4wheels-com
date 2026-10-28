@@ -1,0 +1,12 @@
+<!--META {"need":"sell","see_also":["total-cost-of-ownership","lease-vs-buy","vin-decoder"]} -->
+<div data-tool="depr"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="field"><label for="d-price">Price when new (or what you paid)</label><input id="d-price" name="price" type="number" inputmode="decimal" value="35000" min="0" step="500"></div>
+<div class="row"><div class="field"><label for="d-type">Vehicle type</label><select id="d-type" name="type"><option value="mainstream" selected>Mainstream car</option><option value="luxury">Luxury car</option><option value="truck">Truck or SUV</option><option value="ev">Electric vehicle</option></select></div>
+<div class="field"><label for="d-cond">Condition</label><select id="d-cond" name="condition"><option value="excellent">Excellent</option><option value="good" selected>Good</option><option value="fair">Fair</option></select></div></div>
+<div class="field"><label for="d-years">Age in years</label><div class="range-wrap"><input id="d-years" name="years" type="range" min="1" max="15" step="1" value="5"><output for="d-years">5</output></div></div>
+<div class="field"><label for="d-miles">Miles per year</label><input id="d-miles" name="miles" type="number" inputmode="decimal" value="12000" min="0" step="500"></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Estimated value</h2>
+<p class="readout" data-o="value">—</p><p class="readout-sub" data-o="sub"></p><ul class="kv"><li><span>Value lost</span><b data-o="loss">—</b></li>
+<li><span>Value kept</span><b data-o="kept">—</b></li>
+<li><span>Average loss per year</span><b data-o="peryear">—</b></li></ul><a class="btn btn-go" href="{{root}}get-matched.html?need=sell">Get real offers for your car</a><p class="calc-note">An estimate from typical depreciation curves, not an appraisal. Real offers depend on trim, history and local demand.</p></div></div><h2 style="margin-top:36px">Year by year</h2>
+<div class="table-wrap"><table><thead><tr><th>Age</th><th class="n">Estimated value</th><th class="n">Total lost</th></tr></thead><tbody data-o="table"></tbody></table></div></div>

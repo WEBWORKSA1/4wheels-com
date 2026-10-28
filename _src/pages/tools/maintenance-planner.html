@@ -1,0 +1,11 @@
+<!--META {"need":"warranty","see_also":["tire-size-calculator","total-cost-of-ownership","recall-check"]} -->
+<div data-tool="maint"><div class="calc"><div class="calc-in"><div class="calc-top"><h2>Your numbers</h2>{{currency}}</div>
+<div class="row"><div class="field"><label for="m-odo">Current odometer (miles)</label><input id="m-odo" name="odometer" type="number" inputmode="decimal" value="45000" min="0" step="500"></div>
+<div class="field"><label for="m-per">Miles per year</label><input id="m-per" name="peryear" type="number" inputmode="decimal" value="12000" min="1000" step="500"></div></div>
+<div class="row"><div class="field"><label for="m-power">Powertrain</label><select id="m-power" name="power"><option value="gas" selected>Gasoline</option><option value="hybrid">Hybrid</option><option value="diesel">Diesel</option><option value="ev">Electric</option></select></div>
+<div class="field"><label for="m-cond">Driving conditions</label><select id="m-cond" name="conditions"><option value="normal" selected>Normal</option><option value="severe">Severe (towing, dust, short trips, extreme heat or cold)</option></select></div></div>
+<div data-oil><div class="field"><label for="m-oil">Oil type</label><select id="m-oil" name="oil"><option value="5000">Conventional (about 5,000 mi)</option><option value="7500" selected>Synthetic blend or synthetic (about 7,500 mi)</option><option value="10000">Extended-life synthetic (about 10,000 mi)</option></select></div></div>
+<div class="field"><label for="m-age">Vehicle age in years</label><input id="m-age" name="age" type="number" inputmode="decimal" value="4" min="0" step="1"></div>{{email_results}}</div>
+<div class="calc-out" id="results"><h2>Due in the next 12 months</h2>
+<p class="readout" data-o="count">—</p><p class="readout-sub" data-o="sub"></p><ul class="kv" data-o="list"></ul><a class="btn btn-go" href="{{root}}get-matched.html?need=warranty">Price repair coverage</a><p class="calc-note">Typical intervals only. Your owner's manual is the final word, especially for warranty claims.</p></div></div><h2 style="margin-top:36px">Full schedule from your current mileage</h2>
+<div class="table-wrap"><table><thead><tr><th>Service</th><th class="n">Next due</th><th class="n">When</th><th class="n">Interval</th></tr></thead><tbody data-o="table"></tbody></table></div></div>
