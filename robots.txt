@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_src/
+Disallow: /build.py
+
+Sitemap: https://4wheels.com/sitemap.xml
