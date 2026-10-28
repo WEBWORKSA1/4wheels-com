@@ -325,7 +325,7 @@ ORG_LD = {
     "@type": "Organization",
     "name": "4Wheels",
     "url": SITE,
-    "logo": SITE + "assets/img/icon-512.png",
+    "logo": SITE + "assets/img/favicon.svg",
     "sameAs": [],
 }
 
@@ -426,9 +426,9 @@ def build_guides():
         ld = jsonld(
             {"@context": "https://schema.org", "@type": "Article", "headline": g.get("h1") or g["title"],
              "description": g["description"], "datePublished": TODAY.isoformat(), "dateModified": TODAY.isoformat(),
-             "mainEntityOfPage": canonical(out), "image": SITE + "assets/img/og-image.png",
+             "mainEntityOfPage": canonical(out), "image": SITE + "assets/img/og-image.svg",
              "author": {"@type": "Organization", "name": "4Wheels Editorial Team", "url": SITE + "about.html"},
-             "publisher": {"@type": "Organization", "name": "4Wheels", "logo": {"@type": "ImageObject", "url": SITE + "assets/img/icon-512.png"}}},
+             "publisher": {"@type": "Organization", "name": "4Wheels", "logo": {"@type": "ImageObject", "url": SITE + "assets/img/favicon.svg"}}},
             breadcrumb_ld([("Home", SITE), ("Guides", SITE + "guides/"), (g.get("h1") or g["title"], canonical(out))]),
             faq_ld(g.get("faq", [])),
         )
